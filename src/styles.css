@@ -1,0 +1,18 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+table {
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  white-space: nowrap; /*le colonne non vanno a capo*/
+  overflow-x: scroll;
+  display: block; /* attiva overflow e tiene la dimensione nel contenitore */
+}
+thead {
+  background-color: rgb(26, 26, 131);
+  color: white;
+}
+td {
+  padding: 10px;
+}
