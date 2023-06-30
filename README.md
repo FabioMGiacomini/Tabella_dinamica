@@ -21,3 +21,6 @@ Ogni volta che si effettua un refresh della finestra i dati cambiano</p>
 
 
 #table #js #select
+
+---
+Credits: Thanks to Marko Manojlovic (https://manoylo.ca/) for building the tool (https://random-data-api.com) 
