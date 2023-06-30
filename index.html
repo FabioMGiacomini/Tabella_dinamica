@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabella dinamica</title>
+	<link href="src/styles.css" rel="stylesheet" />
 </head>
 
 <body>
 	<div style="max-width: 800px; padding-top: 30px; margin: auto;">
     <h2>Tabella dinamica</h2>
     <p>La tabella è inizialmente vuota, legge i dati da un indirizzo esterno:</p><p></p>https://random-data-api.com/api/v2/users</p>
+     <!-- Inizio tabella -->
     <div class="rebeltable">
+        <div class="d-flex">
+            <label for="righeTabella">Seleziona il numero di record da visualizzare</label>
+            <select name="righeTabella" id="righeTabella" class="ml-4">Numero 
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+        </div>
         <table id="rebeltable">
             <thead>
                 <td class="col-span-1">nome</td>
@@ -26,6 +36,7 @@
             </tbody>
         </table>
     </div>
+    <!-- Fine tabella -->
     </div>
 
 	<script src="src/index.js"></script>
