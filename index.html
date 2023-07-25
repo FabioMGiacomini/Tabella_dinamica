@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabella dinamica</title>
-	<link href="src/styles.css" rel="stylesheet" />
+    <title>Tabella dinamica</title> 
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .rebeltable{
+            margin-top: 50px;
+        }
+        table{
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            white-space: nowrap; /*le colonne non vanno a capo*/
+            overflow-x: scroll;
+            display: block; /* attiva overflow e tiene la dimensione nel contenitore */
+        }
+        thead{
+            background-color: rgb(26, 26, 131);
+            color: white;
+        }
+        td{
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #paginazione a{
+            border: 1px solid #ccc;
+            padding: 10px 12px;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .justify-end{
+            justify-content: space-between;
+        }
+        .ml-4{
+            margin-left: 16px;
+        }
+    </style>
 </head>
-
 <body>
-	<div style="max-width: 800px; padding-top: 30px; margin: auto;">
+    <div style="max-width: 800px; padding-top: 30px; margin: auto;">
     <h2>Tabella dinamica</h2>
-    <p>La tabella è inizialmente vuota, legge i dati da un indirizzo esterno:</p><p></p>https://random-data-api.com/api/v2/users</p>
-     <!-- Inizio tabella -->
+    <p>La tabella è inizialmente vuota, legge i dati da un URL esterno</p><p></p>https://random-data-api.com/api/v2/users</p>
+    
+    <!-- Inizio tabella -->
     <div class="rebeltable">
         <div class="d-flex">
             <label for="righeTabella">Seleziona il numero di record da visualizzare</label>
             <select name="righeTabella" id="righeTabella" class="ml-4">Numero 
-            <option value="10">10</option>
+            <option value="10" selected>10</option>
             <option value="15">15</option>
             <option value="20">20</option>
         </select>
@@ -37,9 +72,11 @@
         </table>
     </div>
     <!-- Fine tabella -->
+
+      <div id="paginazione" style="margin: 50px 0;"></div>
+
     </div>
 
-	<script src="src/index.js"></script>
+    <script src="app.js"></script>
 </body>
-
 </html>
